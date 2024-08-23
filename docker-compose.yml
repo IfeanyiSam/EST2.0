@@ -10,8 +10,7 @@ services:
     container_name: angular-frontend
     depends_on:
       - backend
-    env_file:
-      - .env 
+    
     profiles:
       - frontend
 
