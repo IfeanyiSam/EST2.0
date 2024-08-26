@@ -187,3 +187,31 @@ output "ssh_private_key" {
   value     = tls_private_key.app_ssh_key.private_key_pem 
   sensitive = true 
 }
+
+output "vpc_id" {
+  value = aws_vpc.app_vpc.id
+}
+
+output "app_public_subnet_1" {
+  value = aws_subnet.app_public_subnet_1.id
+}
+
+output "app_public_subnet_2" {
+  value = aws_subnet.app_public_subnet_2.id
+}
+
+output "aws_route_table" {
+  value = aws_route_table.app_route_table.id
+}
+
+output "aws_route_table_association" {
+  value = aws_route_table_association.app_public_association_1.id
+}
+
+output "aws_route_table_association_2" {
+  value = aws_route_table_association.app_public_association_2.id
+}
+
+output "aws_internet_gateway" {
+  value = aws_internet_gateway.app_igw.id
+}
