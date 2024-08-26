@@ -1,22 +1,9 @@
 version: "3.9"
 
 services:
-  frontend:
-    build:
-      context: ./angular-app
-      dockerfile: Dockerfile
-    ports:
-      - "80:4200"  
-    container_name: angular-frontend
-    depends_on:
-      - backend
-    
-    profiles:
-      - frontend
-
   backend:
     build:
-      context: ./node-app
+      context: .
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
