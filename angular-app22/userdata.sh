@@ -20,8 +20,10 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 git clone https://github.com/IfeanyiSam/EST2.0.git /home/ubuntu/EST2.0
 
 # Navigate to the Node.js app directory
-cd /home/ubuntu/EST2.0/node-app || exit
+cd /home/ubuntu/EST2.0/angular-app22 || exit
 
-docker compose  --profile backend up -d
+echo "ELB_EP=${ELB_EP}" > .env 
+
+docker compose --profile frontend up -d
 
 

@@ -5,7 +5,7 @@ terraform init
 terraform apply --auto-approve
 ELB_EP=$(terraform output --raw alb_dns_name)
 
-cd ../angular-app2
+cd ../angular-app22
 pwd
 echo $ELB_EP
 terraform init

@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  frontend:
+    build:
+      context: ./angular-app
+      dockerfile: Dockerfile
+    ports:
+      - "80:4200"  
+    container_name: angular-frontend
+
+    env_file:
+      - .env
+    
+    profiles:
+      - frontend
+
+ 
